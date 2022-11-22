@@ -1,0 +1,26 @@
+/* font */
+@import url("https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap");
+
+$font: "Barlow Semi Condensed", sans-serif;
+
+/* font colors */
+$dark: #3b4363;
+$score: #2a46c0;
+
+$header-outline: #606e85;
+
+/* background */
+$selection-colors: (
+  "scissors":
+    linear-gradient(180deg, rgba(236, 158, 14, 1) 0%, rgba(236, 169, 34, 1) 40%),
+  "paper":
+    linear-gradient(180deg, rgba(72, 101, 244, 1) 0%, rgba(86, 113, 245, 1) 40%),
+  "rock":
+    linear-gradient(180deg, rgba(220, 46, 78, 1) 0%, rgba(221, 64, 93, 1) 40%),
+);
+
+$background-body: linear-gradient(
+  180deg,
+  rgba(31, 55, 86, 1) 0%,
+  rgba(20, 21, 57, 1) 100%
+);

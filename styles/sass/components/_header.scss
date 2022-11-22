@@ -1,0 +1,38 @@
+@use "../abstracts/variables" as *;
+
+.header {
+  margin-inline: auto;
+  margin-bottom: 2rem;
+  width: min(calc(100% - 2rem), 35rem);
+  height: 6rem;
+  display: flex;
+  justify-content: space-between;
+  border: medium solid $header-outline;
+  border-radius: 0.5rem;
+}
+
+.logo {
+  margin: 1.2rem;
+}
+
+.score {
+  margin: 0.5rem;
+  padding: 1.5rem;
+  width: 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  border-radius: 0.2rem;
+  background-color: white;
+
+  &__text {
+    color: $score;
+    font-size: 0.7rem;
+  }
+
+  &__points {
+    color: $dark;
+    font-size: 2.5rem;
+  }
+}

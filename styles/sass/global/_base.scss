@@ -1,0 +1,30 @@
+@use "../abstracts/variables" as *;
+
+html {
+  font-family: $font;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+*,
+::after,
+::before {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+body {
+  position: relative;
+  min-height: 100vh;
+  padding-top: 3vh;
+  background: $background-body;
+  background-repeat: no-repeat;
+  margin-inline: auto;
+}
+
+img {
+  width: auto;
+  height: 100%;
+}
