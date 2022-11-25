@@ -1,18 +1,19 @@
 const d = document;
 
-const images = {
-  paper: "images/icon-paper.svg",
-  scissors: "images/icon-scissors.svg",
-  rock: "images/icon-rock.svg",
-};
-
 // dom variables
 export const $houseDiv = d.querySelector("#house > div"),
   $yourOptionDiv = d.querySelector("#you > div"),
   $houseImg = d.querySelector("#house img"),
   $textSpan = d.querySelector("#win-lose"),
   $scoreText = d.querySelector(".score__points"),
-  $playAgainBtn = d.querySelector("#play-again");
+  $playAgainBtn = d.querySelector("#play-again"),
+  $loader = d.querySelector(".lds-ellipsis");
+
+const images = {
+  paper: "images/icon-paper.svg",
+  scissors: "images/icon-scissors.svg",
+  rock: "images/icon-rock.svg",
+};
 
 let points = 0;
 
@@ -22,7 +23,7 @@ function getWinner(yourSelection) {
     house = Math.floor(Math.random() * 2.99),
     houseImg = Object.values(images)[house];
 
-  // 2 second time out
+  // 2.5 second time out
   setTimeout(() => {
     /* Tie Option */
     if (you == house) {
@@ -59,9 +60,10 @@ function getWinner(yourSelection) {
     //house img
     $houseImg.src = houseImg;
     //styles
+    $loader.classList.add("lds-ellipsis__disabled");
     $playAgainBtn.classList.remove("disabled");
     $houseDiv.classList.add(`${Object.keys(images)[house]}__result`);
-  }, 2000);
+  }, 2500);
 }
 
 export default getWinner;

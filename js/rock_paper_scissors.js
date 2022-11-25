@@ -3,6 +3,7 @@ import getWinner, {
   $houseImg,
   $textSpan,
   $playAgainBtn,
+  $loader,
 } from "./getWinner.js";
 
 const d = document;
@@ -82,6 +83,7 @@ function rockPaperScissors() {
       $yourOptionDiv.classList.remove("winner");
       $houseDiv.classList.add("loading");
       $playAgainBtn.classList.add("disabled");
+      $loader.classList.remove("lds-ellipsis__disabled");
       $textSpan.innerText = "";
     }
   });
