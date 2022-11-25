@@ -21,6 +21,9 @@ function changeScreen() {
 
 let yourOption;
 
+/* Audio */
+const popSound = new Audio("sound/pop.mp3");
+
 function rockPaperScissors() {
   d.addEventListener("click", (e) => {
     // click paper
@@ -29,6 +32,8 @@ function rockPaperScissors() {
       e.target.matches(".paper > *") ||
       e.target.matches(".paper > * > img")
     ) {
+      //sound
+      popSound.play();
       //styles
       yourOption = "paper__result";
       $yourOptionDiv.classList.add(yourOption);
@@ -44,6 +49,8 @@ function rockPaperScissors() {
       e.target.matches(".scissors > *") ||
       e.target.matches(".scissors > * > img")
     ) {
+      //sound
+      popSound.play();
       //styles
       yourOption = "scissors__result";
       $yourOptionDiv.classList.add(yourOption);
@@ -59,6 +66,8 @@ function rockPaperScissors() {
       e.target.matches(".rock > *") ||
       e.target.matches(".rock > * > img")
     ) {
+      //sound
+      popSound.play();
       //styles
       yourOption = "rock__result";
       $yourOptionDiv.classList.add(yourOption);
@@ -73,6 +82,8 @@ function rockPaperScissors() {
       e.target.matches("#play-again") ||
       e.target.matches("#play-again > *")
     ) {
+      //sound
+      popSound.play();
       //funtion
       changeScreen();
       //styles

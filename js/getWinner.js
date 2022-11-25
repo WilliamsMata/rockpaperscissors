@@ -15,6 +15,11 @@ const images = {
   rock: "images/icon-rock.svg",
 };
 
+/* Sound effect */
+const victorySound = new Audio("sound/victory.mp3"),
+  tieSound = new Audio("sound/tie.mp3"),
+  defeatSound = new Audio("sound/defeat.mp3");
+
 let points = 0;
 
 function getWinner(yourSelection) {
@@ -27,6 +32,8 @@ function getWinner(yourSelection) {
   setTimeout(() => {
     /* Tie Option */
     if (you == house) {
+      //sound
+      tieSound.play();
       //text
       $textSpan.innerText = "TIE";
       // style
@@ -37,6 +44,8 @@ function getWinner(yourSelection) {
       (you === 1 && house === 0) ||
       (you === 2 && house === 1)
     ) {
+      //sound
+      victorySound.play();
       //text
       $textSpan.innerHTML = "YOU WIN";
       //styles
@@ -46,6 +55,8 @@ function getWinner(yourSelection) {
       points += 1;
     } else {
       /* You lose */
+      //sound
+      defeatSound.play();
       //text
       $textSpan.innerHTML = "YOU LOSE";
       //styles
