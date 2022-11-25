@@ -22,7 +22,8 @@ function changeScreen() {
 let yourOption;
 
 /* Audio */
-const popSound = new Audio("sound/pop.mp3");
+const popSound = new Audio("sound/pop.mp3"),
+  popSound1 = new Audio("sound/pop1.mp3");
 
 function rockPaperScissors() {
   d.addEventListener("click", (e) => {
@@ -83,7 +84,7 @@ function rockPaperScissors() {
       e.target.matches("#play-again > *")
     ) {
       //sound
-      popSound.play();
+      popSound1.play();
       //funtion
       changeScreen();
       //styles
