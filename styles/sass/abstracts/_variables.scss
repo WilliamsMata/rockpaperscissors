@@ -19,4 +19,8 @@ $selection-colors: (
     linear-gradient(180deg, rgba(220, 46, 78, 1) 0%, rgba(221, 64, 93, 1) 40%),
 );
 
-$background-body: radial-gradient(circle, #1f3756 0%, #141539 100%);
+$background-body: radial-gradient(
+  circle,
+  rgba(31, 55, 86, 1),
+  rgba(20, 21, 57, 1) 100%
+);
