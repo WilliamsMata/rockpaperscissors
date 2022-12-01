@@ -262,7 +262,7 @@ img {
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: repeat(4, 1fr);
   gap: 1rem;
-  background-image: url(../../../images/bg-triangle.svg);
+  background-image: url(/images/bg-triangle.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: 80%;
